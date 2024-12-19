@@ -1,5 +1,5 @@
 # Bioinformatics Project: Analysis Script
-# Import necessary libraries (if needed)
+
 
 def clean_sequence(sequence):
     """
@@ -34,27 +34,27 @@ def reverse_complement(sequence):
     return ''.join(complement[base] for base in sequence[::-1])
 
 def transcription(sequence):
-    # This function transcribes the DNA sequence to mRNA (T -> U)
+    # transcribes the DNA sequence to mRNA (T -> U)
     return sequence.replace('T', 'U')
 
 # Main function to perform analysis
 if __name__ == "__main__":
-    # Specify the file name containing the DNA sequence
+   
     file_name = "sample_sequence.txt"
     
-    # Read the DNA sequence from the file
+    # Read DNA sequence from the file
     sequence = read_sequence(file_name)
     
-    # Clean the sequence to remove unwanted characters
+    # Clean sequence to remove unwanted characters
     sequence = clean_sequence(sequence)
     
-    # Print the original (cleaned) sequence
+    # Print original (cleaned) sequence
     print("Original Sequence:", sequence)
     
-    # Calculate and print the GC content
+    # Calculate and print GC content
     print("GC Content: {:.2f}%".format(gc_content(sequence)))
     
-    # Calculate and print the reverse complement of the sequence
+    # Calculate and print reverse complement of the sequence
     print("Reverse Complement:", reverse_complement(sequence))
 
      # Transcription (DNA to mRNA)
